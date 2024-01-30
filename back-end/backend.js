@@ -20,24 +20,24 @@ async function fetchData() {
         const similarity = similarities[i];
         const retrievalTime = retrieval_time;
 
-        // Create a container for each image and information
+        // container of image and information
         const imageContainer = document.createElement("div");
 
-        // Create an image element
+        // image element
         const img = document.createElement("img");
         img.src = `<image_path>`;
         imageContainer.appendChild(img);
 
-        // Display similarity below the image
+        // similarity
         const similarityText = document.createElement("p");
         similarityText.textContent = `Similarity: ${similarity}`;
         imageContainer.appendChild(similarityText);
 
-        // Append the container to the main container
+        // append the container to the main container
         container.appendChild(imageContainer);
     }
 
-    // Display retrieval time at the beginning
+    // retrieval time
     const retrievalTimeText = document.createElement("p");
     retrievalTimeText.textContent = `Retrieval Time: ${retrievalTime} seconds`;
     container.insertBefore(retrievalTimeText, container.firstChild);
